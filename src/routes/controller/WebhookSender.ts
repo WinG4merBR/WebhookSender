@@ -8,7 +8,8 @@ router.get('/', (req, res) => {
 
 router.post('/send', async (req, res) => {
     try {
-        webhookManager.sendMessage(req.body.webhook, req.body)
+        await webhookManager.sendMessage(req.body.webhook, req.body);
+        res.redirect("/");
     } catch (e) {
         res.send("<script>alert('Não foi possível enviar a mensagem, verifique a URL do Webhook');window.location.href='/'</script>")
     }
