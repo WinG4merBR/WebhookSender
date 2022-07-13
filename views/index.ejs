@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <title>Webhook Sender</title>
+    <link rel="icon" href="../assets/pandaKawaii.png">
+    <link rel="stylesheet" src="./styles/main.css">
+</head>
+
+<body>
+    <main>
+        <h1>Discord Webhook Sender</h1>
+        <br>
+        <form action="/send" method="post">
+            <input type="text" name="webhook" placeholder="URL do Webhook" required>
+            <input type="text" name="content" placeholder="Mensagem" required>
+            <input type="text" name="username" placeholder="Nome do Webhook (Opcional)">
+            <input type="text" name="avatar" placeholder="Avatar do Webhook (Opcional)">
+            <button type="submit">Enviar</button>
+            <h3>Não insira dados pessoais como telefone, cartão de crédito, etc</h3>
+        </form>
+    </main>
+</body>
+
+</html>
+<style>
+    body {
+        background-color: gray;
+    }
+
+    main {
+        padding-left: 28%;
+        padding-right: 30%;
+        margin-top: 5%;
+        transition-duration: 0.5s;
+        text-align: center;
+    }
+
+    main h1 {
+        color: #fff;
+        font-size: 50px;
+        font-family: sans-serif;
+    }
+
+    main h3 {
+        color: #fff;
+        font-size: 18px;
+        font-family: sans-serif;
+        margin-left: 5px;
+    }
+
+
+    main input {
+        color: rgb(0, 0, 0);
+        background-color: #ffffff;
+        font-family: sans-serif;
+        font-size: 20px;
+        padding: 10px 12px 10px 12px;
+        border-radius: 5px;
+        border: none;
+        margin: 20px 5px 10px 5px;
+        transition-duration: 0.5s;
+    }
+
+    main form button {
+        color: #fff;
+        background-color: #7289da;
+        font-family: sans-serif;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 10px 12px 10px 12px;
+        border-radius: 5px;
+        border: none;
+        margin: 20px 5px 10px 5px;
+        transition-duration: 0.5s;
+    }
+</style>
