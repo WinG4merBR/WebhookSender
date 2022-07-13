@@ -4,9 +4,8 @@ import path from 'path';
 const app: Application = express();
 
 app.use(express.json());
-
-app.set('views', '../public/pages');
-app.use(express.static("../public/pages"));
+app.use(express.urlencoded());
+app.use(express.static("./views"));
 app.set('view engine', 'ejs');
 
 app.use('/', require("../routes/controller/WebhookSender"));
